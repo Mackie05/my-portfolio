@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 
 const projectData: Record<string, {
   title: string;
@@ -132,9 +131,14 @@ const projectData: Record<string, {
   },
 };
 
-export default function ProjectPage() {
-  const params = useParams();
-  const slug = params.slug as string;
+export function generateStaticParams() {
+  return Object.keys(projectData).map((slug) => ({
+    slug,
+  }));
+}
+
+export default function ProjectPage({ params }: { params: { slug: string } }) {
+  const slug = params.slug;
   const project = projectData[slug];
 
   if (!project) {
