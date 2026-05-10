@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Year", name: "year", widget: "string" }
+      - { label: "Client", name: "client", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Challenge", name: "challenge", widget: "text" }
+      - { label: "Solution", name: "solution", widget: "text" }
+      - label: "Results"
+        name: "results"
+        widget: "list"
+        field: { label: "Result", name: "result", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  - name: "videos"
+    label: "Sample Videos"
+    folder: "content/videos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Platform", name: "platform", widget: "string" }
+      - { label: "Views", name: "views", widget: "string" }
+      - { label: "Type", name: "type", widget: "select", options: ["shortForm", "longForm"] }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Video URL", name: "videoUrl", widget: "string", required: false }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - label: "Deliverables"
+        name: "deliverables"
+        widget: "list"
+        field: { label: "Deliverable", name: "deliverable", widget: "string" }
+      - { label: "Icon", name: "icon", widget: "select", options: ["TrendingUp", "Video", "Clapperboard", "Megaphone", "Palette", "BarChart3"] }
