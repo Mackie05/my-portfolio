@@ -54,3 +54,35 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-orange-400;
   }
 }
+
+/* YouTube-style vertical volume slider */
+input[type="range"][style*="writing-mode: vertical-lr"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"][style*="writing-mode: vertical-lr"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"][style*="writing-mode: vertical-lr"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+/* Hide scrollbar on carousel */
+div::-webkit-scrollbar {
+  display: none;
+}
