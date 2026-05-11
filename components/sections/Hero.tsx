@@ -5,7 +5,7 @@ import { ArrowDown } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-start px-6 max-w-7xl mx-auto overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center items-start px-6 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -18,26 +18,28 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="relative z-10 space-y-6"
-      >
-        <p className="text-sm md:text-base font-medium text-white/70 tracking-wide uppercase">
-          Creative Director & Video Editor
-        </p>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white">
-          Shaping stories
-          <br />
-          <span className="text-gradient">that grow brands.</span>
-        </h1>
-        <p className="text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">
-          Multi-disciplinary creative focused on social media growth, short-form
-          content, and long-form storytelling. Building the bridge between
-          strategy and execution.
-        </p>
-      </motion.div>
+      <div className="relative z-10 max-w-7xl mx-auto w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="space-y-6"
+        >
+          <p className="text-sm md:text-base font-medium text-white/70 tracking-wide uppercase">
+            Creative Director & Video Editor
+          </p>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white">
+            Shaping stories
+            <br />
+            <span className="text-gradient">that grow brands.</span>
+          </h1>
+          <p className="text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">
+            Multi-disciplinary creative focused on social media growth, short-form
+            content, and long-form storytelling. Building the bridge between
+            strategy and execution.
+          </p>
+        </motion.div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0 }}
