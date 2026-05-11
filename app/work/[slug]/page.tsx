@@ -109,7 +109,7 @@ const projectData: Record<string, {
     ],
   },
 };
-
+export const dynamicParams = false;
 export function generateStaticParams() {
   return Object.keys(projectData).map((slug) => ({
     slug,
