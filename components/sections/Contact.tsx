@@ -134,7 +134,7 @@ function HazeHeading({ text }: { text: string }) {
   const [intensities, setIntensities] = useState<number[]>(
     new Array(text.length).fill(0)
   );
-  const rafRef = useRef<number>();
+  const rafRef = useRef<number | undefined>(undefined);
   const mouseRef = useRef({ x: -1000, y: -1000 });
 
   const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
