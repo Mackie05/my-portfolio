@@ -55,16 +55,55 @@
   }
 }
 
+/* ============================================
+   EDGE GLOW — Add to app/globals.css
+   ============================================ */
 
-/* Hide scrollbar on carousel */
-div::-webkit-scrollbar {
-  display: none;
-}
-@keyframes edgePulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+/* Animated subtle pulse for the edge glow */
+@keyframes edgeGlowPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
 }
 
-.edge-glow-pulse {
-  animation: edgePulse 8s ease-in-out infinite;
+.edge-glow-container {
+  animation: edgeGlowPulse 6s ease-in-out infinite;
+}
+
+/* Optional: Card hover glow border */
+.card-glow {
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.card-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 115, 22, 0.5) 0%,
+    transparent 50%,
+    rgba(234, 88, 12, 0.3) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card-glow:hover::before {
+  opacity: 1;
 }
