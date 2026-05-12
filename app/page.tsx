@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
-import { SelectedWork } from "@/components/sections/SelectedWork";
+import ProcessSection from "@/components/sections/ProcessSection";
 import { SampleWorks } from "@/components/sections/SampleWorks";
 import { Services } from "@/components/sections/Services";
 import { About } from "@/components/sections/About";
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <SelectedWork />
+      <ProcessSection />
       <SampleWorks />
       <Services />
       <About />
