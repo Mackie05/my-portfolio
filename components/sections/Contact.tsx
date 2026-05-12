@@ -134,7 +134,7 @@ function HazeHeading({ text }: { text: string }) {
   const [intensities, setIntensities] = useState<number[]>(
     new Array(text.length).fill(0)
   );
-  const rafRef = useRef<number | undefined>(undefined);
+  const rafRef = useRef<number>();
   const mouseRef = useRef({ x: -1000, y: -1000 });
 
   const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
@@ -460,8 +460,13 @@ export function Contact() {
                   label="Subject"
                   id="subject"
                   name="subject"
-                  placeholder="What's this about?"
-                  required
+                  select
+                  options={[
+                    "Creative Director Role",
+                    "Freelance Project",
+                    "Brand Partnership",
+                    "Just saying hi",
+                  ]}
                 />
 
                 <LiquidInput
