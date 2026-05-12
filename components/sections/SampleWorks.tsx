@@ -10,7 +10,7 @@ const videos = [
     title: "Storytelling Edit",
     platform: "TikTok / Reels",
     views: "2.4M views",
-    src: "/videos/video-1.mp4",
+    src: "https://res.cloudinary.com/dtnfg5rly/video/upload/v1778550670/Crimeshort_Story_Telling_xwgugw.mp4",
     duration: "0:15",
   },
   {
@@ -18,7 +18,7 @@ const videos = [
     title: "Talking Head Edit",
     platform: "TikTok / Reels",
     views: "1.8M views",
-    src: "/videos/video-2.mp4",
+    src: "https://res.cloudinary.com/dtnfg5rly/video/upload/v1778550669/Short_V1_Motion_Graphics_zpetim.mp4",
     duration: "0:22",
   },
   {
@@ -26,7 +26,7 @@ const videos = [
     title: "Podcast Edit",
     platform: "Instagram / YouTube Shorts",
     views: "890K views",
-    src: "/videos/video-3.mp4",
+    src: "https://res.cloudinary.com/dtnfg5rly/video/upload/v1778550669/Short_V2_Podcast_xckgwf.mp4",
     duration: "0:18",
   },
 ];
