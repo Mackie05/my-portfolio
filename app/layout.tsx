@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navigation } from "@/components/Navigation";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import EdgeGlow from "@/components/EdgeGlow";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,7 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans`}>
+      <body className={`${inter.variable} font-sans relative`}>
+        {/* Edge glow — sits behind all content at z-50 */}
+        <EdgeGlow />
+
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
