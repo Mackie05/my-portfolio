@@ -318,13 +318,13 @@ export default function ProcessSection() {
         className="mt-16 text-center"
       >
         <p className="mb-4 text-white/40">
-          Ready to see this in action?
+          Wanna dive deeper into the process?
         </p>
         <a
-          href="#contact"
+          href="/work"
           className="inline-flex items-center gap-2 rounded-full bg-orange-500/10 px-6 py-3 text-sm font-medium text-orange-400 ring-1 ring-orange-500/20 transition-all duration-300 hover:bg-orange-500/20 hover:ring-orange-500/40"
         >
-          Start a project
+          Learn more here
           <ArrowRight size={14} />
         </a>
       </motion.div>
