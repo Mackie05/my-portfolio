@@ -29,6 +29,8 @@ export default function RootLayout({
         {/* Edge glow — sits behind all content at z-50 */}
         <EdgeGlow />
 
+<html lang="en" className="scroll-smooth" suppressHydrationWarning></html>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
