@@ -29,6 +29,14 @@ const videos = [
     src: "https://res.cloudinary.com/dtnfg5rly/video/upload/v1778550669/Short_V2_Podcast_xckgwf.mp4",
     duration: "0:18",
   },
+  {
+    id: 4,
+    title: "Talking Head Edit",
+    platform: "Instagram / YouTube Shorts",
+    views: "890K views",
+    src: "https://res.cloudinary.com/dtnfg5rly/video/upload/v1778784980/Short_V3_ei8c23.mp4",
+    duration: "0:24",
+  },
 ];
 
 const allVideos = Array(20).fill(videos).flat();

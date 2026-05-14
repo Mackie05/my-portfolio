@@ -38,7 +38,6 @@ const skills = [
   "Content Analytics",
   "Brand Identity",
   "Team Leadership",
-  "Adobe Premiere Pro",
   "DaVinci Resolve",
   "After Effects",
   "CapCut",
